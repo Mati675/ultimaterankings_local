@@ -1,0 +1,73 @@
+
+<body bgcolor="f85f18">
+{% block content %}
+
+<center><h1>Math</h1></center>
+<p>Player's are ranked by their Overall in all 4 ultimate tables, and by Points/Min in top scorers tables. Only those who played at least 10 minutes a game are considered.</p>
+<p>Overall is counted using a player's career per minute stats, from both regular seasons and playoffs.
+It is a result of adding a player's positive stats multiplied by their weights, and subtracting
+the negative ones, also multiplied by their weights:
+
+<div>OVRL = UPTS * WEIGHT + DREB * WEIGHT + OREB * WEIGHT + AST * WEIGHT + STL * WEIGHT + BLK * WEIGHT
+- PF * WEIGHT - TOV * WEIGHT</div>
+<div>OVRL - Overall</div>
+<div>DREB - Defensive Rebounds</div>
+<div>OREB - Offensive Rebounds</div>
+<div>AST - Assists</div>
+<div>STL - Steals</div>
+<div>BLK - Blocks</div>
+<div>PF - Personal Fouls</div>
+<div>TOV - Turnovers</div>
+<div>UPTS - Ultimate Points (explained below, takes all scoring stats into account)</div>
+<div>* if the player's Offensive and Defensive Rebounds don't match the Total Rebounds-
+total rebounds are used instead. Such errors could take place when a player started his career before
+1973-74 season, when the NBA started tracking rebounds separately.</div></p>
+
+<p>Ultimate Points are Points times True Shooting Percentage, an accuracy rating taking into account all types
+of shots (3p, 2p, 1p) as well as the fact that sometimes a player only shoots 1 Free Throw, and sometimes 2 (the 0.44 multiplier):
+
+<div>UPTS = PTS * TS%</div>
+<div>PTS - Points</div>
+<div>TS% - True Shooting Percentage</div>
+
+<div>TS% = PTS / (2 * (FGA + 0.44 * FTA))</div>
+<div>FGA - Field Goal Attempts</div>
+<div>FTA - Free Throw Attempts</div></p>
+
+
+<p>Now the weights. Winning a championship is assumed as the ultimate goal of participation in any sports league.
+So for each season, each champions' stat was compared to the league average-
+the better the winners were at something than the rest- the more important it was in succeeding and
+the bigger this stat's weight.
+And vice versa, the poorer the victors scored in something than the rest- the less significant
+it was in their success and the smaller this stat's weight:
+
+<div>POSITIVE STATS:</div>
+<div>WEIGHT = CHAMPIONS' STAT / LEAGUE AVERAGE</div>
+
+<div>NEGATIVE STATS:</div>
+<div>WEIGHT = LEAGUE AVERAGE / CHAMPIONS' STAT</div>
+
+
+<div>Final weight of each stat is the average value from all seasons.</div></p>
+
+
+<p>Simpler Version rankings are basically the same, only they take less stats into account.
+Namely Steals, Turnovers and Blocks are removed from the formula, and Total Rebounds are used
+instead of Defensive and Offensive separately- 
+all the removed stats weren't tracked untill 1973-74 season.</p>
+
+
+<p>Finally, the Height Adjusted rankings-
+In Top Scorers Lists all stats are divided by the player's height.
+In Ultimate Players Lists Overall is divided by the player's height.</p>
+
+
+<p>Please bear in mind that statistics are representative only of the
+actually quantifiable input a player has in their team's success.
+They do not take into account plenty of the game's nuances.</p>
+
+
+<p>But they're a pretty good indicator nonetheless.</p>
+
+{% endblock %}

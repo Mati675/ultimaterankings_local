@@ -1,0 +1,80 @@
+{% load static %}
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Ultimate Rankings</title>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+<div id="wrapper"><div id="man">
+	<h1>ULTIMATE RANKINGS</h1>
+	<div id="nav">
+		<p><a href="home/topscorers">Top 50 NBA Scorers</a></p>
+		<p><a href="home/topscorersha">Top 50 NBA Scorers Height Adjusted</a></p>
+		<p><a href="home/ultimateplayers">Ultimate Top 50 NBA Players</a></p>
+		<p><a href="home/ultimateplayersha">Ultimate Top 50 NBA Players Height Adjusted</a></p>
+		<p><a href="home/ultimateplayersoa">Ultimate Top 50 NBA Players Simpler Formula</a></p>
+		<p><a href="home/ultimateplayersoaha">Ultimate Top 50 NBA Players Height Adjusted Simpler Formula</a></p>
+		<p><a href="home/math">Math</a></p>
+	</div>
+	<div id="body">
+		<div class="drk" id="welcome">
+			<div class="top">
+				<div class="bot">
+					<div class="picbar"><img src="{% static 'images/pic_2.jpg' %}" width="458" height="103" alt="Pic 2"></div>
+					<div class="pad">
+						<h2>Hi,</h2>
+						<p>My goal here at Ultimate Rankings is to end the "Who's The G.O.A.T." debate once and for all, and put minds of those still on the fence at ease. </p>
+				<p>The idea was to take all the statistics from all teams and players, from all seasons, figure out which stats matter how much in a team's success, and use the formula to determine who's actually, at least mathematically, the Best Basketball Player Ever.</p>
+				<p>And I did. If you'd like to know exactly how the weight of each statistic was calculated, and how the player's are ranked, please go to the "Math" section.</p>			
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="drk" id="news">
+			<div class="top">
+				<div class="bot">
+					<img src="{% static 'images/pic_3.jpg' %}" width="156" height="249" alt="Pic 3" class="right" />
+					<div class="pad">
+						<p>But, since half the sport is being able to reach higher than your oponent, you might think that it's not fair to judge all the athletes on the same criteria, whether they're 1.9m, or 2.2m tall. And you'd be right.</p>
+						<p>So I thought that I should prepare a seperate set of rankings, ones taking into account everyone's height.</p>
+						<p>And I did. Again, if you're into Math, go to the section by that same name.</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div class="lit" id="features">
+			<div class="top">
+				<div class="bot">
+					<div class="pad">
+						<div class="event">
+							<h3>Fun Fact</h3>
+							<p>NBA began as BAA, which stood for Basketball Association of America.</p>
+							<p>BAA's first ever game took place in Toronto, in 1946.</p>
+						</div>
+						<div class="event">
+							<h3>Second Fun Fact</h3>
+							<p>Michael Jordan's last second shot in Space Jam won the game.</p>
+							<p>But, despite taking off from half court, he only got 2 points, not 3.</p>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div></div>
+<div id="foot">
+	<div id="foot-left">
+		<div id="foot-ball"></div> 
+	</div>
+</div>
+</body>
+</html>
